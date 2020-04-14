@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+
+    <!-- local css file -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/style.css" />
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Attendance Registration Page</h2>
+        <form class="loginForm">
+            <div class="form-group">
+                <label for="user">User Name:</label>
+                <input type="text" class="form-control input-style" placeholder="Enter UserName" id="username">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Access ID:</label>
+                <input type="text" class="form-control input-style" placeholder="Enter Access ID" id="accessId">
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="login_submit">Submit</button>
+            </div>
+            <p>Click the "Start" button to begin video recording for a few seconds. You can stop
+            the video by clicking the "Stop" button. The "Download"
+            button will download the received data (although it's in a raw, unwrapped form
+            that isn't very useful).
+            </p>
+            <br>
+            <div class="left">
+            <div id="startButton" class="button">
+                Start
+            </div>
+            <h2>Preview</h2>
+            <video id="preview" width="160" height="120" autoplay muted playsinline></video>
+            </div>
+            <div class="right">
+            <div id="stopButton" class="button">
+                Stop
+            </div>
+            <h2>Recording</h2>
+            <video id="recording" width="160" height="120" controls playsinline></video>
+            <a id="downloadButton" class="button">
+                Upload
+            </a>
+            </div>
+            <div class="bottom">
+            <pre id="log"></pre>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- js files -->
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+</body>
+</html>
